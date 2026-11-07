@@ -7,10 +7,11 @@ description: agent-lab 的完整交付流程：需求澄清、OpenSpec 行为契
 
 ## 开始前
 
-1. 读根 `AGENTS.md`；进入子目录时再读该目录最近的 `AGENTS.md`。
-2. 按 AGENTS 的任务分级确认级别；只有完整流程才走下面的状态机。
-3. 完整流程先加载 `test-driven-development` skill，再动生产代码。
-4. 检查工作树，保护已有修改；新增产物时先看 README 产物表。
+根与子目录的 `AGENTS.md` 由 DSH 自动注入，这里不重复读取。
+
+1. 按已加载的 AGENTS 确认任务级别；只有完整流程才走下面的状态机。
+2. 完整流程先加载 `test-driven-development` skill，再动生产代码。
+3. 检查工作树，保护已有修改；新增产物时先看 README 产物表。
 
 ## 状态机
 
