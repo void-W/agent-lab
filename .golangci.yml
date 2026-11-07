@@ -1,0 +1,18 @@
+# golangci-lint 配置（v2 schema）。
+# 保守集：Go 默认 linter，避免早期被风格告警淹没；规则收紧在仓库层面统一做。
+version: "2"
+
+run:
+  timeout: 5m
+
+linters:
+  default: standard
+  exclusions:
+    # 豁免 defer Close()/Flush 等惯用未检查返回值。
+    presets:
+      - std-error-handling
+
+issues:
+  # 不截断告警，让门禁完整暴露。
+  max-issues-per-linter: 0
+  max-same-issues: 0

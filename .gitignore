@@ -1,0 +1,7 @@
+bin/
+/harness
+coverage.txt
+*.out
+.DS_Store
+AGENTS.local.md
+.cache/

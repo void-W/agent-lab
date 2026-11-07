@@ -1,0 +1,28 @@
+schema: spec-driven
+
+# 仓库上下文 —— 注入到 OpenSpec artifact 生成中
+context: |
+  ## 仓库定位
+  agent-lab 是个人 Agent 工程仓库：一个仓库、多个可独立运行的程序产物。
+  当前产物是 harness（本地 CLI），后续会有知识库服务、工具与实验。
+  代码从零开始，按领域分层；不预建领域内部结构。
+
+  ## 技术栈
+  - Go 1.25，单 module
+  - 本地配置使用 TOML，键名 snake_case
+  - CI 使用 GitHub Actions，只调用 Makefile target
+
+  ## 约定
+  - 文档与代码注释使用简体中文，标识符英文
+  - 契约先行：先写行为 spec，再 RED→GREEN
+  - 命令统一走 make
+
+rules:
+  proposal:
+    - 每个 change 只解决一个问题
+    - 跨产物变更列出受影响产物与实现顺序
+  specs:
+    - Scenario 使用 Given/When/Then
+    - Requirement 使用 SHALL / MUST / SHOULD 等 RFC 2119 关键字
+  tasks:
+    - 每个 task 应能在一次会话或 2 小时内完成

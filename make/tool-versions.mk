@@ -1,0 +1,3 @@
+# 仓库级工具版本唯一事实源。
+GOLANGCI_LINT_VERSION := v2.12.2
+OPENSPEC_VERSION := 1.3.1
